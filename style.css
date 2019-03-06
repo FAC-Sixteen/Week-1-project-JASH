@@ -1,1 +1,74 @@
+body{
+    margin: 0;
+}
+
+.nav-bar {
+    background-color: blue;
+    width: 100%;
+    height: 80px;
+}
+
+img {
+    width: 80px;
+    position: absolute;
+   
+}
+
+.slogan {
+    position: absolute;
+    font-size: 4rem;
+    padding-left: 150px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    text-align: left;
+    position: relative;
+    opacity: 0;
+    font-size: 2rem;
+}
+
+.burger-icon__line {
+    height: 2px;
+    width: 60px;
+    position: relative;
+    background-color: black;
+    margin: 15px;
+    
+}
+
+.burger-icon {
+    position: absolute;
+    right: 0%;
+    height: 500px;
+    padding-right: 90px;
+    
+}
+
+.burger-icon:hover>.burger-icon__line:nth-child(1){
+    transform: translateY(20px) rotate(45deg);
+    transition: all 0.5s ease;
+        
+}
+
+.burger-icon:hover>.burger-icon__line:nth-child(2){
+    opacity: 0;
+    transition: all 0.2s ease;
+    
+}
+
+.burger-icon:hover>.burger-icon__line:nth-child(3){
+    transform: translateY(-20px) rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+.burger-icon:hover>.burger__line-icon {
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.burger-icon:hover>.nav-menu{
+    opacity: 1;
+    transition: all 0.9s ease;
+}
 
