@@ -12,7 +12,7 @@ body{
 img {
     width: 80px;
     position: absolute;
-   
+    object-fit: cover;
 }
 
 .slogan {
@@ -72,6 +72,7 @@ img {
     opacity: 1;
     transition: all 0.9s ease;
 }
+
 .anna {
   --accent: 247;
 }
@@ -89,8 +90,15 @@ img {
 }
 
 .team-card {
-  font-family: "Lato", sans-serif;
-  color: hsla(var(--accent), 30%, 20%, 1);
+    font-family: "Lato", sans-serif;
+    color: hsla(var(--accent), 30%, 20%, 1);
+    
+}
+
+.team-card img {
+    max-height: 400px;
+    max-width: 400px;
+    position: relative;
 }
 
 .team-text h2 {
@@ -102,6 +110,53 @@ img {
   padding: 1.5em;
   text-align: justify;
   line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+    .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    .team-card {position: relative;
+/*    min-height: 800px;*/
+    display: flex;
+    flex-direction: column
+    }
+    
+    .anna {
+        align-items: flex-end;
+    }
+    
+    .henry {
+        align-items: flex-end;
+    }
+    
+    .anna img {
+        right: 0;
+        bottom: 0;
+    }
+    
+    .sam img {
+        left: 0;
+        bottom: 0;
+    }
+    
+    .henry img {
+        right: 0;
+        top: 0;
+        
+    }
+    
+    .james img {
+        left: 0;
+        top: 0;
+    }
+    
+    .henry, .james {
+        flex-direction: column-reverse
+    }
+    
 }
 
 @media (max-width: 600px) {
