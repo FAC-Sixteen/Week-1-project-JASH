@@ -1,8 +1,9 @@
 @media (max-width: 600px) {
   .team-card {
     display: flex;
-    border: solid black;
+    /* border: solid black; */
     justify-content: space-between;
+    box-shadow: 4px 8px 20px 2px hsla(207, 18%, 10%, 0.4);
   }
 
   .right {
