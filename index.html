@@ -22,23 +22,25 @@
           <span class="slogan">insert slogan</span>
         </div>
         <div class="burger-icon">
-          <div class="burger-icon__line"></div>
-          <div class="burger-icon__line"></div>
-          <div class="burger-icon__line"></div>
+          <div class="burger-lines">
+            <div class="burger-icon__line"></div>
+            <div class="burger-icon__line"></div>
+            <div class="burger-icon__line"></div>
+          </div>
           <ul class="nav-menu">
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Contact</li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="team-grid">
+      <section class="team-grid" id="team">
         <section class="team-card left anna">
 
-           
+
           <div class="team-text">
             <h2>The Thinker</h2>
             <p>
@@ -87,9 +89,9 @@
           <img src="assets/james.jpg" class="team-image"></img>
         </section>
       </section>
-      <section class="about-card about-text">
+      <section class="about-card about-text" id="about">
         <!-- <h2>About</h2> -->
-        <video src="assets/cover-vid.mp4" autoplay loop="true"></video>
+        <video src="assets/cover-vid.mp4" playsinline="true" autoplay="true" loop="true" muted="true"></video>
         <div class="video-overlay">
         <blockquote>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
