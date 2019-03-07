@@ -100,23 +100,26 @@
         </div>
       </section>
       <section class ="contact__form">
-          <h>asd</h>
         <form action="#" method="POST">
-          <div class ="form__name">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="user_name">
-            </div>
-            <div class ="form__email">
-              <label for="mail">E-mail:</label>
-              <input type="email" id="mail" name="user_mail">
-            </div>
-            <div class ="form__message">
-              <label for="msg">Message:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            <button class="btn__submit" type="submit">Send Message</button>
-            </div>
-        </form>
-      </section>
+            <h>Are you ready?</h>
+        <fieldset>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" placeholder="Jash Funderberker">
+        </div>
+        <div>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_mail" placeholder="valid.email@realaddress.com"
+           required pattern="[-.\w]+@([\w-]+\.)+[\w-]{2,4}">
+        </div>
+        </fieldset>
+        <fieldset>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message" rows="10" placeholder="Dear JASH, I am interested in hiring you for..."></textarea>
+        </fieldset>
+        <button class="btn__submit" type="submit">Send Message</button>  
+      </form>
+        </section>
     </main>
   </body>
 </html>

@@ -245,17 +245,9 @@ body {
   }
 }
 
-.contact__form form {
-  font-family: "Lato", sans-serif;
-  margin: 0 auto;
-  padding: 5em;
-  border: 2px solid;
-  border-color: rgba(148, 142, 194, 1);
-  width: 50%;
-  border-radius: 0.25em;
-}
-
-.btn__submit {
+.contact__form {
+  text-align: center;
+  height: 100vh;
   background-image: linear-gradient(
     to right,
     rgba(148, 142, 194, 1),
@@ -263,13 +255,58 @@ body {
     rgba(142, 177, 194, 1),
     rgba(194, 151, 142, 1)
   );
+}
+
+.contact__form form {
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 0.25em;
+  display: inline-block;
+  padding-top: 25vh;
+}
+
+.btn__submit {
+  font-size:1.5rem;
+  font-family: "Lato", sans-serif;
+  background-color: white;
+  padding: 1em;
   border-radius: 5px;
+  border: 0.5px solid black;
 }
 
 input,
 textarea {
-  width: 300px;
+  width: 75%;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 0.25em;
+  resize: none;
+  line-height: 20px;
+  font: 1em "Lato", sans-serif;
+  padding: 1em;
 }
+
+input {
+  margin-top: 10px;
+}
+
+input:focus:invalid {
+  border: 2px dashed purple;
+}
+
+input:valid{
+  border: 1px solid black;
+}
+
+
+fieldset {
+  border: none;
+}
+
+form h {
+  font-size: 2.5rem;
+}
+
+
+
