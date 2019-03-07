@@ -104,9 +104,49 @@ body {
 }
 
 .about-text {
-  padding: 1.5em;
+  /* padding: 1.5em; */
   text-align: justify;
   line-height: 1.5;
+  /* background-color: pink; */
+  height: 100vh;
+  /* background: url("assets/cover-vid.mp4"); */
+  /* background-size: cover; */
+}
+
+.about-text video {
+  z-index: -1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.video-overlay {
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text blockquote {
+  border-left: 8px solid hsl(var(--accent), 50%, 50%);
+  padding: 1.5em 2em 1.5em 4em;
+  background-color: white;
+  width: 60vw;
+  position: relative;
+}
+
+.about-text blockquote::before {
+  content: "\201C";
+  color: hsl(var(--accent), 50%, 50%);
+
+  font-size: 6em;
+  padding: 0;
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
 }
 
 .team-text h2 {
@@ -124,11 +164,13 @@ body {
   .team-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    /* width: 100vh; */
   }
 
   .team-card {
     /* display: inline; */
-    /* position: relative; */
+    position: relative;
     /*    min-height: 800px;*/
     /* display: flex; */
     /* flex-direction: column; */
@@ -136,53 +178,37 @@ body {
     /* box-shadow: 4px 8px 20px 2px hsla(var(--accent), 50%, 30%, 0.4); */
   }
 
+  .team-text {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    opacity: 0.1;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    height: 100%;
+  }
+
+  .team-text:hover {
+    opacity: 1;
+  }
+
   .team-card img {
-    max-height: 150px;
-    max-width: 150px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    object-fit: cover;
     /* margin: 10px; */
     /* position: relative; */
     /* box-shadow: 4px 8px 20px 2px hsla(var(--accent), 50%, 30%, 1); */
   }
 
   .anna {
-    /* float: right; */
-    /* align-items: flex-end; */
+    /* background-image: url("assets/anna.jpg"); */
   }
 
-  .henry {
-    /* align-items: flex-end; */
-  }
-
-  .anna img {
-    float: right;
-
-    /* right: 0;
-    bottom: 0; */
-  }
-
-  .sam img {
-    /* display: inline; */
-    float: left;
-    /* left: 0;
-    bottom: 0; */
-  }
-
-  .henry img {
-    float: right;
-    margin-left: 10px;
-    /* right: 0;
-    top: 0; */
-  }
-
-  .james img {
-    float: left;
-    /* left: 0;
-    top: 0; */
-  }
-
-  .henry,
-  .james {
-    /* flex-direction: column-reverse; */
+  .about-text {
+    /* padding: 4em; */
+    line-height: 2;
   }
 }
 
