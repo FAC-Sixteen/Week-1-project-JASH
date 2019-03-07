@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   margin: 0;
-  --accent: 200;
-  font-family: "Lato", sans-serif;
+  --accent: 350;
 }
 
 .nav-bar {
+  z-index: 100;
+  position: fixed;
   background-image: linear-gradient(
     to right,
     rgba(148, 142, 194, 1),
@@ -18,18 +20,23 @@ body {
   );
   width: 100%;
   height: 80px;
+  border-bottom: 2px solid hsl(220, 100%, 10%);
 }
 
 .logo-image {
   width: 80px;
   position: absolute;
   object-fit: cover;
+  fill: hsl(220, 100%, 10%);
+  padding: 5px;
 }
 
 .slogan {
   position: absolute;
-  font-size: 4rem;
-  padding-left: 150px;
+  top: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0px 100px;
+  color: hsl(220, 100%, 10%);
 }
 
 .nav-menu {
@@ -40,41 +47,43 @@ body {
   font-size: 2rem;
   z-index: 10;
   background-color: hsla(0, 0%, 100%, 0.6);
-  margin-top: 80px;
+  margin: 0;
   padding: 0;
+  padding-top: 80px;
 }
 
 .nav-menu a:link {
-  color: black;
+  color: hsl(220, 100%, 10%);
   text-decoration: none;
 }
 
 .nav-menu a:nth-child(1):hover {
-  color: white;
   text-decoration: underline;
-  text-decoration-color: pink;
+  text-decoration-color: hsl(350, 100%, 70%);
 }
 
 .nav-menu a:visited {
-  color: black;
+  color: hsl(220, 100%, 10%);
   text-decoration: none;
 }
 
-.nav-menu a {
+.nav-menu li {
   padding: 0.25em;
 }
 
 .burger-lines {
   position: absolute;
-  right: 0;
+  right: 10px;
+  top: 5px;
+  z-index: 20;
 }
 
 .burger-icon__line {
   height: 2px;
-  width: 60px;
+  width: 40px;
   position: relative;
-  background-color: black;
-  margin: 15px;
+  background-color: hsl(220, 100%, 10%);
+  margin-top: 15px;
 }
 
 .burger-icon {
@@ -83,19 +92,21 @@ body {
   height: 500px;
 }
 
-.burger-icon:hover > .burger-icon__line:nth-child(1) {
-  transform: translateY(20px) rotate(45deg);
+.burger-icon:hover .burger-icon__line:nth-child(1) {
+  transform: translateY(17px) rotate(45deg);
   transition: all 0.5s ease;
+  background-color: hsl(350, 100%, 70%);
 }
 
-.burger-icon:hover > .burger-icon__line:nth-child(2) {
+.burger-icon:hover .burger-icon__line:nth-child(2) {
   opacity: 0;
   transition: all 0.2s ease;
 }
 
-.burger-icon:hover > .burger-icon__line:nth-child(3) {
-  transform: translateY(-20px) rotate(-45deg);
-  transition: all 0.3s ease;
+.burger-icon:hover .burger-icon__line:nth-child(3) {
+  transform: translateY(-17px) rotate(-45deg);
+  transition: all 0.5s ease;
+  background-color: hsl(350, 100%, 70%);
 }
 
 .burger-icon:hover > .burger__line-icon {
@@ -138,13 +149,9 @@ body {
 }
 
 .about-text {
-  /* padding: 1.5em; */
   text-align: justify;
   line-height: 1.5;
-  /* background-color: pink; */
-  height: 100vh;
-  /* background: url("assets/cover-vid.mp4"); */
-  /* background-size: cover; */
+  /* height: 100vh; */
 }
 
 .about-text video {
@@ -157,30 +164,11 @@ body {
 
 .video-overlay {
   height: 100%;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 1);
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.about-text blockquote {
-  border-left: 8px solid hsl(var(--accent), 50%, 50%);
-  padding: 1.5em 2em 1.5em 4em;
-  background-color: white;
-  width: 60vw;
-  position: relative;
-}
-
-.about-text blockquote::before {
-  content: "\201C";
-  color: hsl(var(--accent), 50%, 50%);
-
-  font-size: 6em;
-  padding: 0;
-  position: absolute;
-  top: -3rem;
-  left: 1rem;
 }
 
 .team-text h2 {
@@ -194,27 +182,26 @@ body {
   line-height: 1.5;
 }
 
+.spacer {
+  height: 80px;
+}
+
 @media (min-width: 600px) {
   .team-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    /* width: 100vh; */
+    height: calc(100vh - 80px);
+
+    font-size: 1.2em;
   }
 
   .team-card {
-    /* display: inline; */
     position: relative;
-    /*    min-height: 800px;*/
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* border: 0.25px solid; */
-    /* box-shadow: 4px 8px 20px 2px hsla(var(--accent), 50%, 30%, 0.4); */
   }
 
   .team-text {
-    background-color: hsla(0, 0%, 100%, 0.5);
-    opacity: 0.1;
+    background-color: hsla(0, 0%, 100%, 0.6);
+    opacity: 0;
     transition-property: opacity;
     transition-duration: 0.5s;
     height: 100%;
@@ -231,18 +218,37 @@ body {
     top: 0;
     z-index: -10;
     object-fit: cover;
-    /* margin: 10px; */
-    /* position: relative; */
-    /* box-shadow: 4px 8px 20px 2px hsla(var(--accent), 50%, 30%, 1); */
-  }
-
-  .anna {
-    /* background-image: url("assets/anna.jpg"); */
   }
 
   .about-text {
-    /* padding: 4em; */
     line-height: 2;
+    height: 100vh;
+    /* background-color: white; */
+  }
+
+  .about-text blockquote {
+    border-left: 8px solid hsl(var(--accent), 100%, 70%);
+    padding: 1.5em 2em 1.5em 4em;
+    width: 60vw;
+    position: relative;
+    font-size: 1.2em;
+    background-color: white;
+  }
+
+  .about-text blockquote::before {
+    content: "\201C";
+    color: hsl(var(--accent), 100%, 70%);
+
+    font-size: 6em;
+    padding: 0;
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+  }
+
+  .video-overlay {
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.6);
   }
 
   /*form rules*/
@@ -253,11 +259,16 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+  .slogan {
+    font-size: 3vw;
+  }
+}
+
 @media (max-width: 600px) {
   .team-card {
     height: 300px;
     display: flex;
-    /* border: solid black; */
     justify-content: space-between;
     box-shadow: 4px 8px 20px 2px hsla(var(--accent), 50%, 30%, 0.4);
   }
@@ -270,6 +281,23 @@ body {
     max-width: 40%;
     height: 100%;
     object-fit: cover;
+  }
+  .slogan {
+    font-size: 4vw;
+  }
+
+  .about-text blockquote {
+    border-left: 8px solid hsl(var(--accent), 100%, 70%);
+    padding: 1.5em 2em 1.5em 4em;
+  }
+
+  .video-overlay {
+    /* background-color: hsla(0, 0%, 100%, 1); */
+  }
+
+  .about-text video {
+    height: 0;
+    width: 0;
   }
 }
 
