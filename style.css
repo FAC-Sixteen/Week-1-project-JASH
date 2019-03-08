@@ -185,6 +185,7 @@ html {
   padding: 1.5em;
   text-align: justify;
   line-height: 1.5;
+  overflow: scroll;
 }
 
 .spacer {
