@@ -8,6 +8,10 @@ body {
   --accent: 350;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-bar {
   z-index: 100;
   position: fixed;
@@ -69,6 +73,7 @@ body {
 
 .nav-menu li {
   padding: 0.25em;
+  list-style: none;
 }
 
 .burger-lines {
