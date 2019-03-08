@@ -338,6 +338,12 @@ body {
   border: 0.5px solid black;
 }
 
+#alertdiv {
+    display:inline;
+    font-family: inherit;
+    color: white;
+}
+
 input,
 textarea {
   width: 75%;
