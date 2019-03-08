@@ -215,6 +215,7 @@ html {
   padding: 1.5em;
   text-align: justify;
   line-height: 1.5;
+  overflow: scroll;
 }
 
 .spacer {
@@ -300,7 +301,7 @@ html {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .team-card {
     height: 300px;
     display: flex;
@@ -338,7 +339,8 @@ html {
 
 .contact__form {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-image: linear-gradient(
     to right,
     rgba(148, 142, 194, 1),
