@@ -16,3 +16,15 @@ Our Week 1 project! James, Anna, Sam, Henry.
     It also includes
     * a header with our slogan so that the client can immediately get a concise description of what we have to offer, and
     * a fixed navigation burger so that the client can easily navigate between the three sections.
+    
+We mainly pair programmed, alternating pairs to work on different sections. We also ended up using a lot of git to combine the different features we all worked on.
+
+#### What did we learn?
+    * Inspect things! Using inspect allowed us to see why some things were in the wrong place (eventually).
+    * HSL colour values are awesome.
+    * CSS variables.
+    
+#### What would we improve?
+    * Fix mobile form alignment
+    * Add click/focus functionality to burger menu
+    * Make logo link to top
