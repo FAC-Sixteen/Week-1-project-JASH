@@ -271,7 +271,7 @@ html {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .team-card {
     height: 300px;
     display: flex;
