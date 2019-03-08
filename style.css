@@ -94,7 +94,7 @@ html {
 .burger-icon {
   position: absolute;
   right: 10px;
-  height: 500px;
+  /* height: 500px; */
 }
 
 .burger-icon:hover .burger-icon__line:nth-child(1) {
