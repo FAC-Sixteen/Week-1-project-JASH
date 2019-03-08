@@ -35,6 +35,10 @@ html {
   padding: 5px;
 }
 
+.logo-link {
+  height: 80px;
+}
+
 .slogan {
   position: absolute;
   top: 1.5rem;
