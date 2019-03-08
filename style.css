@@ -58,6 +58,7 @@ html {
   margin: 0;
   padding: 0;
   padding-top: 80px;
+  transition: all 0.9s ease;
 }
 
 .nav-menu a:link {
@@ -85,6 +86,7 @@ html {
   right: 10px;
   top: 5px;
   z-index: 20;
+  transition: all 0.5s ease;
 }
 
 .burger-icon__line {
@@ -93,6 +95,8 @@ html {
   position: relative;
   background-color: hsl(220, 100%, 10%);
   margin-top: 15px;
+
+  transition: all 0.5s ease;
 }
 
 .burger-icon {
