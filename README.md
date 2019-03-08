@@ -14,8 +14,8 @@ Our Week 1 project! James, Anna, Sam, Henry.
         - "-600px/600px+", Attempt to make responsive Web form for submitting contact details and accompanying message. placeholder text for all inputs, input types relevant to input and email input features required pattern attribute with regex disallowing invalid inputs.  
 
     It also includes
-    - a header with our slogan so that the client can immediately get a concise description of what we have to offer, and
-    - a fixed navigation burger so that the client can easily navigate between the three sections.
+        - a header with our slogan so that the client can immediately get a concise description of what we have to offer, and
+        - a fixed navigation burger so that the client can easily navigate between the three sections.
     
 We mainly pair programmed, alternating pairs to work on different sections. We also ended up using a lot of git to combine the different features we all worked on.
 
